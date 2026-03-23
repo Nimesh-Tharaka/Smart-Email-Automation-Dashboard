@@ -1,0 +1,262 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e5e7eb;
+  background: #0b1020;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 24%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 20%),
+    #0b1020;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #60a5fa;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: #cbd5e1;
+  max-width: 620px;
+}
+
+.refresh-button {
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card,
+.panel {
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.stat-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-card span {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.stat-card strong {
+  font-size: 1.8rem;
+}
+
+.panel {
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button,
+.search-box button {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #111827;
+  color: #e5e7eb;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  min-width: 260px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.panel-header span {
+  color: #94a3b8;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-panel th,
+.table-panel td {
+  text-align: left;
+  vertical-align: top;
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.table-panel th {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.subject-cell p {
+  margin: 6px 0 0;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.work {
+  background: rgba(37, 99, 235, 0.18);
+  color: #93c5fd;
+}
+
+.badge.shopping {
+  background: rgba(34, 197, 94, 0.16);
+  color: #86efac;
+}
+
+.badge.newsletter {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fcd34d;
+}
+
+.badge.other {
+  background: rgba(148, 163, 184, 0.16);
+  color: #e2e8f0;
+}
+
+.flag-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mini-flag {
+  display: inline-block;
+  background: rgba(236, 72, 153, 0.16);
+  color: #f9a8d4;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+}
+
+.empty-state {
+  padding: 28px;
+  text-align: center;
+  color: #cbd5e1;
+}
+
+.empty-state.error {
+  color: #fca5a5;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    min-width: 100%;
+  }
+}

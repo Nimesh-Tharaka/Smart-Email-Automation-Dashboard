@@ -1,0 +1,21 @@
+Admin
+username: admin
+password: admin123
+Staff
+username: staff
+password: staff123
+Approver
+username: approver
+password: approver123
+
+==================
+cd backend
+venv\Scripts\activate
+fastapi dev app/main.py
+
+=======================
+cd n8n
+docker compose up -d
+==================
+n8n
+http://127.0.0.1:5678
